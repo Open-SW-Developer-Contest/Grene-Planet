@@ -76,7 +76,7 @@ ul{
     z-index: 10;
 }
 #topMenu > li > ul > li > a:hover {
-    color : #f00;
+    color :green;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');

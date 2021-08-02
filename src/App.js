@@ -7,9 +7,8 @@ function App() {
   return (
     <Layout>
       <Switch>
-        <Header>
+        <Header/>
           <Route path='/test' component={Test_Page} exact={true} />
-        </Header>
       </Switch>
     </Layout>
   );
