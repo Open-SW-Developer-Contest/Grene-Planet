@@ -1,0 +1,83 @@
+*{
+    font-family: 'Do Hyeon', sans-serif;
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-image: url('./img/photo-3.jpg');
+}
+
+#logo{
+    float: left;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 30px;
+}
+#logo h1{
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    font-size: 38px;
+    color: #fff;
+    text-shadow: 5px -1px 0 #222;
+}
+nav{
+    float: right;
+    width: 800px;
+    height: 100px; 
+    padding-top: 20px;
+    padding-left: 0px;
+}
+ul{
+    list-style: none;
+}
+#topMenu{
+    height: 40px;
+}
+#topMenu > li{
+    float: left;
+    position: relative;
+}
+#topMenu > li > a{
+    display : block;
+    color: black;
+    font-weight: 600;
+    font-size: 26px;
+    text-shadow: 0 1px #07c;
+    padding: 15px 50px;
+}
+#topMenu > li > a > span {
+    font-size: 0.5em;
+}
+#topMenu > li > Link:hover{
+    color: #000;
+    text-shadow: 0 -1px #07c;
+}
+#topMenu > li > ul{
+    display: none;
+    position: absolute;
+    width: 160px;
+    background-color: rgba(255, 255, 255, 0.4);
+    left: 0;
+    margin: 0;
+    left: 20px;
+}
+#topMenu > li > ul > li{
+    padding: 10px 10px 10px 30px;
+}
+#topMenu > li > ul > li > a{
+    font-size: 20px;
+    padding: 10px;
+    color: #000;
+}
+#topMenu > li:hover > ul{
+    display: block;
+    z-index: 10;
+}
+#topMenu > li > ul > li > a:hover {
+    color : #f00;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
