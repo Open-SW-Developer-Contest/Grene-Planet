@@ -1,14 +1,12 @@
 import {Route, Switch} from 'react-router-dom'
 import Layout from './Layout';
-import Test_Page from './Test_Page';
-import Header from './Header';
+import Test from './Test';
 
 function App() {
   return (
     <Layout>
       <Switch>
-        <Header/>
-          <Route path='/test' component={Test_Page} exact={true} />
+          <Route path='/' component={Test} exact={true} />
       </Switch>
     </Layout>
   );
