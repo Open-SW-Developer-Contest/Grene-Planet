@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
-import IMG1 from './img/sns-1.png';
-import IMG2 from './img/sns-2.png';
-import IMG3 from './img/sns-3.png';
+import IMG1 from '../img/sns-1.png';
+import IMG2 from '../img/sns-2.png';
+import IMG3 from '../img/sns-3.png';
 import './Footer.css';
 
 
