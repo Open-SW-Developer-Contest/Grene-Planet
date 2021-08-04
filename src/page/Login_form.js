@@ -1,15 +1,19 @@
 import './Login_form.css';
+import {Link} from 'react-router-dom';
 
 function Login_form(){
-        return (
-        <form>
-            <fieldset id="login">
-                <label>아 이 디 : <input type="text" id="user_id" size="10"/></label><br/>
-                <label>비밀번호 : <input type="password" id="user_pw" size="10"/></label><br/>
-                <input type="submit" value="로그인"/>
-            </fieldset>
-        </form>
-        );
+    return (
+        <div class="form-wrap">
+            <form id="login" action="" class="input-group">
+                <input type="text" class="input-field" placeholder="User name" required/>
+                <input type="password" class="input-field" placeholder="Enter Password" required/><br/>
+                <input type="checkbox" class="checkbox"/><span>Remember Password</span>
+                <Link to="#">
+                    <button class="submit">Login</button>
+                </Link>
+            </form>
+        </div>
+    );
 }
 
 export default Login_form;

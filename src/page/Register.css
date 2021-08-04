@@ -8,21 +8,20 @@
     position: relative;
     margin: 0% auto;
     margin-top: 20px;
-    padding: 10px;
     overflow: hidden;
     background-image: url('../img/cloud.jpeg');
     border-radius: 2%;
 }
 
-.input-group {
-    margin: 0 auto;
+#register {
     margin-top: 100px;
+    margin-right: 160px;
     width: 280px;
 }
 .input-field {
     color: white;
     font-size: 25px;
-    width: 100%;
+    width: 250px;
     padding: 10px 0;
     margin: 5px 0;
     border: none;
@@ -38,12 +37,12 @@
     cursor: pointer;
     display: block;
     margin: auto;
+    margin-top: 30px;
     background: linear-gradient(to right, #63cded, #c7e6f4);
     border: 0;
     outline: none;
     border-radius: 30px;
 }
-
 span {
     color: white;
     font-size: 14px;
