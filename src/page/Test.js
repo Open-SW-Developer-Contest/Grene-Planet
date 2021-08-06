@@ -1,11 +1,12 @@
 import './Test.css';
 import Login from './Login';
+import Image_Box from './Image_Box';
 
 function Test(){
         return (
         <div id="test">
-        <Login/>
-        <h1>Test</h1>
+                <Image_Box/>
+                <Login/>
         </div>
         );
 }

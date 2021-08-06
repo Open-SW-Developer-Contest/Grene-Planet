@@ -7,11 +7,11 @@ function Login(){
             <fieldset id="login_form">
                 <p>Grene Planet을 더 안전하고 편리하게 이용하세요</p>
                 <Link to="/login_form">
-                    <button id="login_bnt">Login</button>
+                    <div id="login_bnt">Login</div>
                 </Link><br/>
                 <Link to="/register" id="register">
                     <img src={regist_img} alt="" align="left"/>
-                    회원가입
+                    <p>회원가입</p>
                 </Link>
             </fieldset>
         );

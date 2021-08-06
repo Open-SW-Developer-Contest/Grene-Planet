@@ -17,6 +17,7 @@ const Header = () => {
                         <li><Link to="#">미세먼지</Link></li>
                         <li><Link to="#">자연재해</Link></li>
                         <li><Link to="#">물, 식량 부족</Link></li>
+                        <li><Link to="#">홍보 게시판</Link></li>
                     </ul>
                 </li>
                 <li><Link to="#">News <span>▼</span></Link>
@@ -34,7 +35,7 @@ const Header = () => {
                     </ul>
                 </li>
 
-                <li><Link to="#">홍보 게시판</Link></li>
+                <li><Link to="#">문의사항</Link></li>
             </ul>
         </nav>
         </header>
