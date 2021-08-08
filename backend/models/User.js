@@ -27,29 +27,5 @@ UserSchema.methods.comparePassword = function(inputPassword, cb) {
         cb('error');
     }
 };
-/*
-UserSchema.path('email').validate(function(email) {
-    return email.length;
-}, 'email 칼럼의 값이 없습니다.');
 
-UserSchema.method('athenticate', function(plainText, inSalt, hashed_password) {
-    if (inSalt) {
-        console.log('authenticate 호출됨.');
-        return this.encryptPassword(plainText, inSalt) === hashed_password;
-    } else {
-        console.log('authentiacate 호출됨.');
-        return this,encryptPassword(plainText) === hashed_password;
-    }
-});
-
-UserSchema.static('findByEmail', function(email, callback) {
-    return this.find({ email:email }, callback);
-});
-UserSchema.static('findAll', function(callback) {
-    return this.find({}, callback);
-});
-*/
-// model을 export 해주기
-// var User = mongoose.model("user", userSchema);
-// module.exports = { User };
 module.exports = User = mongoose.model('user', UserSchema)

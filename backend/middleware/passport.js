@@ -29,6 +29,7 @@ module.exports = () => {
                     console.log('login success');
                     return done(null, user);        // 검증 성공
                 }
+                console.log('login fail : wrong password');
                 return done(null, false, { message: '비밀번호가 틀렸습니다' });    // 임의 에러 처리
             });
         });

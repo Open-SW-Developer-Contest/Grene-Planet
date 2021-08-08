@@ -3,7 +3,7 @@ var User = require('../../models/User');    // user model 불러오기
 var router = express.Router();              // express의 Router 사용
 var bcrypt = require('bcryptjs');           // 암호화 모듈
 var jwt = require('jsonwebtoken');          // json web token 모듈
-var secretObj = require('../../config/jwt');   // jwt secret key
+var secretObj = require('../../config/secret');   // jwt secret key
 
 router.post(
     '/',
@@ -40,7 +40,7 @@ router.post(
             };
             jwt.sign(
                 payload,                    // token으로 변환할 데이터
-                secretObj.secret,                // secret key 값
+                secretObj.jwtSecret,                // secret key 값
                 { expiresIn: "1h"},         // token의 유효시간을 1시간으로 설정
                 (err, token) => {
                     if (err) throw err;

@@ -1,7 +1,6 @@
-var jwtObj = {};
-var sessionObj = {};
+var Obj = {};
 
-jwtObj.secret = 'jwtSecret';
-sessionObj = 'sessionSecret';
+Obj.jwtSecret = 'jwtSecret';
+Obj.sessionSecret = 'sessionSecret';
 
-module.exports = jwtObj, sessionObj;
+module.exports = Obj;

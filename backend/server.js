@@ -4,12 +4,14 @@ var connectDB = require("./config/db");
 var session = require('express-session'); // 세션 설정
 var passport = require('passport'); // 여기와
 var passportConfig = require('./middleware/passport'); // 여기
+var secretObj = require('./config/secret');
 // app 생성
 var app = express();
 // PORT 번호 기본값 3000으로 설정
 var PORT = process.env.PORT || 3000;
+var sessionSecret = secretObj.sessionSecret
 
-app.use(session({ secret: '비밀코드', resave: true, saveUninitialized: false })); // 세션 활성화
+app.use(session({ secret: sessionSecret, resave: true, saveUninitialized: false })); // 세션 활성화
 // passport를 미들웨어로 등록
 app.use(passport.initialize()); // passport 구동
 app.use(passport.session()); // 세션 연결
