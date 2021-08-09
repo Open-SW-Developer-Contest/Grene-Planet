@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/Register.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="login">
+            <h2>Register</h2>
+            <div class="login_sns">
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            </div>
+
+            <div class="login_form">
+                <h4>Name</h4>
+                <input type="text" id="reg_name" class="reg_info" placeholder="Fullname">
+            </div>
+            <div class="login_form">
+                <h4>E-mail</h4>
+                <input type="email" id="reg_email" class="reg_info" placeholder="Email">
+            </div>
+            <div class="login_form">
+                <h4>Password</h4>
+                <input type="password" id="reg_pwd" class="reg_info" placeholder="Password">
+            </div>
+            <div class="login_etc">
+                <div class="checkbox">
+                    <input type="checkbox" id=""> Remember Me?
+                </div>
+            </div>
+            <div class="submit">
+                <button type="button" onclick="register()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./Login.js"></script> 
+</body>
+</html>
