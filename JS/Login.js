@@ -1,17 +1,19 @@
 function login() {
     const user_email = document.getElementById("login_email").value;
     const user_pwd = document.getElementById("login_password").value;
-    
-    const user_info = new FormData();
-    user_info.append('email', user_email);
-    user_info.append('password', user_pwd);
 
-    axios.post(url,user_info)
+    axios.post('http://52.78.200.49:3000/login',{
+        "email" : "yunx2@naver.com",
+        "password" : "1234"
+    })
     .then((response)=>{
         console.log(response);
+        alert('로그인 되었습니다.');
+        history.back();
     })
     .catch((error)=>{
         console.log(error);
+        alert('다시 로그인 해주세요.');
     })
 }
 
@@ -20,16 +22,18 @@ function register(){
     const reg_email = document.getElementById("reg_email").value;
     const reg_pwd = document.getElementById("reg_pwd").value;
 
-    const user_reg_info = new FormData();
-    user_reg_info.append('name', reg_name);
-    user_reg_info.append('email', reg_email);
-    user_reg_info.append('password', reg_pwd);
-
-    axios.post(url,user_reg_info)
+    axios.post('http://52.78.200.49:3000/register',{
+        "name" : reg_name,
+        "email" : reg_email,
+        "password" : reg_pwd
+    })
     .then((response)=>{
         console.log(response);
+        alert("회원가입이 완료되었습니다.");
+        history.back();
     })
     .catch((error)=>{
         console.log(error);
+        alert('다시 회원가입 해주세요.');
     })
 }
