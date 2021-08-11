@@ -1,7 +1,6 @@
 function login() {
     const user_email = document.getElementById("login_email").value;
     const user_pwd = document.getElementById("login_password").value;
-    const login = document.querySelector("#Login_Logout");
 
     axios.post('http://52.78.200.49:3000/login',{
         "email" : "yunx2@naver.com",
@@ -14,9 +13,7 @@ function login() {
     })
     .catch((error)=>{
         console.log(error);
-        login.innerText="로그아웃";
         alert('다시 로그인 해주세요.');
-        location.href="/Page/Main_Page.html";
     })
 }
 

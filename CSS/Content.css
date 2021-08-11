@@ -91,5 +91,6 @@
 #links ul li a p{
     margin-top: 15px;
     font-weight: 600;
-    color: #666;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
 }
