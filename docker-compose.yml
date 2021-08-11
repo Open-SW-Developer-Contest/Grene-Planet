@@ -1,0 +1,15 @@
+version: "3.0"
+
+services: 
+  front_end:
+    build: ./
+    container_name: react
+    volumes: 
+      - ./:/app
+    environment: 
+      - NODE_ENV=development
+      # CHOKIDAR_USEPOLLING=ture은 App이 수정되었을 경우 Reload이 가능하도록 하는 설정
+      - CHOKIDAR_USEPOLLING=true
+    ports: 
+      - 3000:3000
+    restart: always
