@@ -7,34 +7,35 @@ var passportConfig = require('./middleware/passport'); // 여기
 var secretObj = require('./config/secret');
 // app 생성
 var app = express();
+// cors
+var cors = require("cors");
+
+connectDB();
+
 // PORT 번호 기본값 3000으로 설정
 var PORT = process.env.PORT || 3000;
 var sessionSecret = secretObj.sessionSecret
 
+var corsOptions = {
+    origin: true,
+    credentials: true
+};
+
+// passport
+passportConfig();
 app.use(session({ secret: sessionSecret, resave: true, saveUninitialized: false })); // 세션 활성화
 // passport를 미들웨어로 등록
 app.use(passport.initialize()); // passport 구동
 app.use(passport.session()); // 세션 연결
+app.use(cors(corsOptions));
+app.use(express.json());  // app.use(express.json({ extended: false }));
+app.use(express.urlencoded({ extended: true })); // ??
 
-// get 요청시 "API running"을 response 해주기
-/*
-app.get("/", (req, res) => {
-    res.send("API Running");
-});
-*/
-
-// Connect DB
-connectDB();
-
-passportConfig(); // passport
-
-// 첫번째 인자로 PORT 번호
-// 두번째 인자로 callback 함수를 통해 server 구축 성공시 console log
+// listen
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
-// allow us to get the data in request.body
-app.use(express.json({ extended: false }));
 // api route
+app.use("/board", require("./routes/api/boardRouter"));
 app.use("/register", require("./routes/api/register"));
 app.use("/getUser", require("./routes/api/getUser"));
 app.use("/", require("./routes/api/login"));

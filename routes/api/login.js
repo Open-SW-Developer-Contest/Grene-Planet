@@ -24,5 +24,12 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 });
 
+router.get("/logout", (req, res) => {
+  console.log("/logout" + req.sessionID);
+  req.session.destroy(() => {
+    res.json({ message: true });
+  });
+});
+
 // exports
 module.exports = router;
