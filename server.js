@@ -39,3 +39,4 @@ app.use("/board", require("./routes/api/boardRouter"));
 app.use("/register", require("./routes/api/register"));
 app.use("/getUser", require("./routes/api/getUser"));
 app.use("/", require("./routes/api/login"));
+app.use("/", require("./routes/api/news"));
